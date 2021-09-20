@@ -134,7 +134,7 @@ def concat_lists(image_list, directory_list, destination_dir, pad=False):
             i+=1
         cv2.imwrite(destination_dir+image_name, img)
 
-image_name = 'material_overlay'
+image_name = 'bounding_box_overlay'
 source_image_dir = './test_images/'
 image_list_dir = source_image_dir
 destination_dir = './concat_images/'
