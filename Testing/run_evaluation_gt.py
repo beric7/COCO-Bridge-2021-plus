@@ -13,7 +13,7 @@ from mAP_main import mAP_Results
 
 
 # module level variables ######################################################
-validation_image_directory = './Evaluation/300x300/Images/'
+test_image_directory = './Evaluation/300x300/Images/'
 destination_dir = './gt_bbox_images/'
 NUM_CLASSES = 4
 label_map_file = './label_map.pbtxt'
