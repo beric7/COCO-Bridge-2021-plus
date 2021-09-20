@@ -3,67 +3,29 @@ Extension on the COCO-Bridge Dataset
 
 [COCO-Bridge Paper]
 
-
-
 ## SSD Summary
 
-- YoloV4 is a real-time state-of-the-arc object detector. Modern Neural Networks operated in real-time
-  require significant power from multiple GPU's, while YoloV4 uses a Convolutional Neural Network (CNN) that
-  can reduce the consumption to one singular GPU. YoloV4 has comparable results to state-of-the-art real-time
-  object detection models and runs twice as fast
+(TODO)
 
 ## Overview
-- Our implementation had difficulties running from console due to compatibility issues with cmake
-  and opencv while trying to build the project, but had promising results by implementing Yolov4
-  through [Google Colab](https://colab.research.google.com/drive/1MOjUxrYAl05Be2QVPyDC0D8bZ2TVXCif) 
-  
-- Our dataset was focused on the structual components found on the underside of bridges. The images in the dataset were annotated
+- Our dataset was focused on the structual components found on the underside of steel bridges. The images in the dataset were annotated
   using [labelme](https://github.com/wkentaro/labelme). 
   
-- Created a conversion script, **keypoint-to-text-to-json.py**, to take the resultant labelme json file and convert it to text file format so the keypoint values could
-  be stored and used to create the xml format annotations for our objects. This script then converts back to json format.
+- Training: Trained an SSD model and a YOLOv4 model. The SSD had a best mAP score of 60% while the YOLOv4 model was able to reach 84.52% under the same model parameters. This repository hold the SSD model, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab, however, other researchers and interested people are welcome to try and get it up and running on your local machines!
 
-- Created a yolov4 conversion script, **xml_to_yolo_format.py**, to convert our xml annotations to the yolov4 textfile format
+- Testing: We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. 
 
-- The model achieved the highest **Mean Average Precision (mAP)** score at the **7000 iteration** checkpoint with a **mAP score of 84.52%**
-  when detecting these 4 structual component:
+- Testing: We can visualize and save the predictions made by the trained model, as well as view the ground truth predictions overlayed on the images. 
+
+- Visulization: We can concatenate the results from the predictions, ground truth labels, and base images for a visual summery of the performance.  
+
+The four object classes in the dataset are:
 ```
           Bearing
           Out of Plane Stiffener
           Gusset Plate Connection
           Cover Plate Termination:
 ```
-- The following results are similarity scores for the model's predicted bounding boxes and the annotated bounding boxes:
-```
-Gusset Plate Connection: 99%	(left_x:    0   top_y:  214   width:   53   height:   66)
-Out of Plane Stiffener: 97%	(left_x:   51   top_y:  152   width:   21   height:  163)
-Out of Plane Stiffener: 95%	(left_x:   99   top_y:  118   width:   19   height:  192)
-Gusset Plate Connection: 100%	(left_x:  150   top_y:   67   width:   38   height:   82)
-Gusset Plate Connection: 95%	(left_x:  153   top_y:  252   width:   35   height:   31)
-Out of Plane Stiffener: 99%	(left_x:  166   top_y:   59   width:   28   height:  253)
-Out of Plane Stiffener: 94%	(left_x:  278   top_y:   -1   width:   43   height:  307)
-```
-- The model began to experience overfitting around **8000 iterations** and therefore the mAP score would decrease with further iterations
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/54971419/124635837-e45fc480-de55-11eb-97ea-d66ea55fcf8b.png" />
-    <img src="https://user-images.githubusercontent.com/54971419/124629491-7e703e80-de4f-11eb-9b9a-08bc2cb14d09.png" />
-</p>
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/54971419/124635758-cb571380-de55-11eb-8d3d-419603c25c81.png" />
-    <img src="https://user-images.githubusercontent.com/54971419/124635122-145a9800-de55-11eb-844f-230ba745c5aa.png" />
-</p>
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/54971419/125976914-07381084-6c3b-4ba1-b7e8-ce53e3bd436f.png" />
-    <img src="https://user-images.githubusercontent.com/54971419/125977251-140ac061-57fa-4f58-8230-dd287f179fe5.png" />
-</p>
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/54971419/125977387-fac0a79d-369f-4c27-a577-56bb82e6937d.png" />
-    <img src="https://user-images.githubusercontent.com/54971419/125977460-54fe4954-bd71-40b9-896e-b9af1e2daf7b.png" />
-</p>
 
 ## Requirements
 - CMake >= 3.18
@@ -74,14 +36,12 @@ Out of Plane Stiffener: 94%	(left_x:  278   top_y:   -1   width:   43   height: 
 - GPU with Compute Capability (CC) >= 3.0 (If GPU a GeForce GTX 650 or newer it is most likely compatible)
 
 ## Reproduce Results
-- Download the [Google Colab](https://drive.google.com/drive/u/1/folders/1FFRRw1OoenVb4nAc70Iw1BGja1gF4SxE) to Google Drive
-  
-- Clone the [repository](https://github.com/beric7/YOLOv4_infrastructure.git) and download the [Partial Dataset](https://data.lib.vt.edu/articles/dataset/COCO-Bridge_Common_Objects_in_Context_Dataset_for_Structural_Detail_Detection_of_Bridges/14097068) to use for detection on the pretrained model.
+- Clone the [repository](https://github.com/beric7/YOLOv4_infrastructure.git) and download the [Dataset]() to use for detection with the pretrained model.
 
-- Download the checkpoint weight file [***yolo-obj_7000.weights***](https://drive.google.com/drive/u/0/folders/1FFRRw1OoenVb4nAc70Iw1BGja1gF4SxE) to use for initial training and place within the "backup" directory.
+- Download the checkpoint weight file [******](https://drive.google.com/drive/u/0/folders/1FFRRw1OoenVb4nAc70Iw1BGja1gF4SxE) to use for initial training and place within the "backup" directory.
 
 ## Setup for Training
-1. Clone the [repository](https://github.com/beric7/YOLOv4_infrastructure.git), download the [Partial Dataset](https://data.lib.vt.edu/articles/dataset/COCO-Bridge_Common_Objects_in_Context_Dataset_for_Structural_Detail_Detection_of_Bridges/14097068), and download the [google colab](https://colab.research.google.com/drive/1MOjUxrYAl05Be2QVPyDC0D8bZ2TVXCif)
+1. Clone the [repository](https://github.com/beric7/YOLOv4_infrastructure.git), download the [Partial Dataset](https://data.lib.vt.edu/articles/dataset/COCO-Bridge_Common_Objects_in_Context_Dataset_for_Structural_Detail_Detection_of_Bridges/14097068), and download the 
 
 
 2. Download the base weight file [***yolov4.conv.137***](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) to use for initial training and place within the "darknet" directory
