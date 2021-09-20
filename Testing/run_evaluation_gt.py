@@ -19,4 +19,4 @@ NUM_CLASSES = 4
 label_map_file = './label_map.pbtxt'
 ###############################################################################
 
-evaluation(validation_image_directory, destination_dir, NUM_CLASSES, label_map_file,  0.10)
+evaluation(test_image_directory, destination_dir, NUM_CLASSES, label_map_file,  0.10)
