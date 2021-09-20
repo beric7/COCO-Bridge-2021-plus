@@ -20,9 +20,9 @@ from eval_bbox import eval_bbox
 from class_list import class_list
 from txt_to_xml import txt2xml
 
-def evaluation(validation_image_directory, destination_dir, NUM_CLASSES, label_map_file, txt_file, threshold):
+def evaluation(test_image_directory, destination_dir, NUM_CLASSES, label_map_file, txt_file, threshold):
     ###########################################################################
-    TEST_IMAGE_DIR = validation_image_directory
+    TEST_IMAGE_DIR = test_image_directory
     LABELS_LOC = label_map_file
     imageFileName = ""
     ###########################################################################
