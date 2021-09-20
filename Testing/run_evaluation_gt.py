@@ -8,7 +8,6 @@ conda env tf_1-10_py3-6
 
 import sys
 from evaluation_gt import evaluation
-sys.path.insert(0, "E://Python/8_evaluate_performance/")
 from metrics_eval_build import metricsEval
 from mAP_main import mAP_Results
 
