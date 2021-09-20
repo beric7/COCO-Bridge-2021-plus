@@ -1,18 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul  1 09:59:24 2019
-
-@author: Eric Bianchi
-reviewed: 6/17/2020
-"""
-
-# test.py
-"""
 Created on Sat Nov  3 15:15:34 2018
 
 @author: Eric Bianchi
-
-Based on code from Chris Dahms
 """
 
 import numpy as np
@@ -21,20 +11,19 @@ import tensorflow as tf
 import cv2
 import sys
 
-sys.path.insert(0, "E://Scraping_Python_Pkg")
+sys.path.insert(0, "../")
 from utils import label_map_util
 from utils import visualization_utils as vis_util
+sys.path.insert(0, "../general_utils/")
 from eval_bbox import eval_bbox
 from class_list import class_list
 from TXT_to_XML import txt2xml
 
 def main(NUM_CLASSES, Model, threshold, thres_str):
     ###########################################################################
-    pwd = "E://BridgeDetailModels/" + Model + "/Pre-Processing"
-    cur = "E://DATA"
-    TEST_IMAGE_DIR = cur + "/Test"
-    FROZEN_INFERENCE_GRAPH_LOC = pwd + "/inference_graph/frozen_inference_graph.pb"
-    LABELS_LOC = pwd + "/" + "label_map.pbtxt"
+    TEST_IMAGE_DIR = 'LOCATION OF TEST IMAGES' + "/"
+    FROZEN_INFERENCE_GRAPH_LOC = 'LOCATION OF INFERENCE GRAPH' + "/inference_graph/frozen_inference_graph.pb"
+    LABELS_LOC = 'LOCATION OF LABEL FILE' + "/" + "label_map.pbtxt"
     imageFileName = ""
     ###########################################################################
     print("starting program . . .")
