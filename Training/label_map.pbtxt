@@ -1,0 +1,19 @@
+item {
+  id: 1
+  name: 'Gusset Plate Connection'
+}
+
+item {
+  id: 2
+  name: 'Out of Plane Stiffener'
+}
+
+item {
+  id: 3
+  name: 'Cover Plate Termination'
+}
+
+item {
+  id: 4
+  name: 'Bearing'
+}
