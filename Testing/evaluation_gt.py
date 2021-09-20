@@ -13,7 +13,7 @@ import tensorflow as tf
 import cv2
 import sys
 
-sys.path.insert(0, "E://Python/general_utils/")
+sys.path.insert(0, "../general_utils/")
 from utils import label_map_util
 from utils import visualization_utils as vis_util
 from eval_bbox import eval_bbox
