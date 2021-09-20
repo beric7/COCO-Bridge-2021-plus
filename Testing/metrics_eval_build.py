@@ -9,7 +9,7 @@ import os
 import csv
 import sys
 
-sys.path.insert(0, "D://Python/general_utils/")
+sys.path.insert(0, "../general_utils/")
 from eval_con import eval_con
 
 def metricsEval(csv_gt_evaluation_file, parent_directory, type=0):
