@@ -7,8 +7,7 @@ reviewed: 6/17/2020
 """
 
 import sys
-sys.path.insert(0, "E://Scraping_Python_Pkg")
-from test_self_annotation import main
+from self_annotation import main
 
 
 # ============================================================================
