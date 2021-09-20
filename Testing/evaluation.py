@@ -19,9 +19,10 @@ import tensorflow as tf
 import cv2
 import sys
 
-sys.path.insert(0, "../general_utils/")
+sys.path.insert(0, "../")
 from utils import label_map_util
 from utils import visualization_utils as vis_util
+sys.path.insert(0, "../general_utils/")
 from eval_bbox import eval_bbox
 from class_list import class_list
 from txt_to_xml import txt2xml
