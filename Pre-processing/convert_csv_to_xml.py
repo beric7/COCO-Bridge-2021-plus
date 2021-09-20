@@ -6,7 +6,7 @@ Created on Thu Jul 16 10:09:27 2020
 """
 
 import sys
-sys.path.insert(0, 'E://Python/general_utils/')
+sys.path.insert(0, '../general_utils/')
 from csv_to_xml import csv_to_xml
 
 
