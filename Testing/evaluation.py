@@ -26,9 +26,9 @@ from eval_bbox import eval_bbox
 from class_list import class_list
 from txt_to_xml import txt2xml
 
-def evaluation(parent_directory, validation_image_directory, NUM_CLASSES, label_map_file, threshold, thres_str):
+def evaluation(parent_directory, test_image_directory, NUM_CLASSES, label_map_file, threshold, thres_str):
     ###########################################################################
-    TEST_IMAGE_DIR = validation_image_directory
+    TEST_IMAGE_DIR = test_image_directory
     FROZEN_INFERENCE_GRAPH_LOC = parent_directory + "/frozen_inference_graph.pb"
     LABELS_LOC = label_map_file
     imageFileName = ""
