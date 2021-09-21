@@ -20,10 +20,10 @@ Extension on the COCO-Bridge Dataset
 
 ## References
 
-# Dataset
+### Dataset
 - The dataset information can be found [here](10.7294/16624495). **Please cite both the dataset and the journal article if you are using it.** 
 
-# Model
+### Model
 - The model information can be found [here](10.7294/16625095). **Please cite both the model and the journal article if you are using it.** 
 
 The images in the dataset were annotated using [labelme](https://github.com/wkentaro/labelme). 
