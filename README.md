@@ -8,16 +8,25 @@ Extension on the COCO-Bridge Dataset
 (TODO)
 
 ## Overview
-- Our dataset was focused on the structual components found on the underside of steel bridges. The images in the dataset were annotated
-  using [labelme](https://github.com/wkentaro/labelme). 
+- Our dataset and model was focused on the detection of typical structual components which must be check during a bridge inspection. These components are found on the underside of steel bridges. This type of detection would be beneficial to the inspection process to aid with unmanned aerial system missions as well as localizing and contextualizing elements to semi-automate bridge inspection reports or captioning. 
   
-- Training: Trained an SSD model and a YOLOv4 model. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository hold the SSD model, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab, however, other researchers and interested people are welcome to try and get it up and running on your local machines!
+- Training (SSD): We trained an SSD model and a YOLOv4 model. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository is the SSD configuration, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab. However, other researchers and interested people are welcome to try to get it running on your local machines!
 
-- Testing: We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. 
+- Testing (SSD): We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. 
 
-- Testing: We can visualize and save the predictions made by the trained model, as well as view the ground truth predictions overlayed on the images. 
+- Testing (Visualization): We can visualize and save the predictions made by the trained model, as well as view the ground truth predictions overlayed on the images. 
 
 - Visulization: We can concatenate the results from the predictions, ground truth labels, and base images for a visual summery of the performance.  
+
+## References
+
+# Dataset
+- The dataset information can be found [here](10.7294/16624495). **Please cite both the dataset and the journal article if you are using it.** 
+
+# Model
+- The model information can be found [here](10.7294/16625095). **Please cite both the model and the journal article if you are using it.** 
+
+The images in the dataset were annotated using [labelme](https://github.com/wkentaro/labelme). 
 
 The four object classes in the dataset are:
 ```
@@ -36,7 +45,9 @@ The four object classes in the dataset are:
 - GPU with Compute Capability (CC) >= 3.0 (If GPU a GeForce GTX 650 or newer it is most likely compatible)
 
 ## Reproduce Results
-- Clone the [repository](https://github.com/beric7/YOLOv4_infrastructure.git) and download the [Dataset]() to use for detection with the pretrained model.
+- Clone the repository
+- Download the [Dataset]()
+- Download the [Trained Model]
 
 - Download the checkpoint weight file [******](https://drive.google.com/drive/u/0/folders/1FFRRw1OoenVb4nAc70Iw1BGja1gF4SxE) to use for initial training and place within the "backup" directory.
 
