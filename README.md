@@ -1,32 +1,24 @@
 # COCO-Bridge-2021-plus
 Extension on the COCO-Bridge Dataset
 
-[COCO-Bridge Paper]
-
-## SSD Summary
-
-(TODO)
-
 ## Overview
 - Our dataset and model was focused on the detection of typical structual components which must be check during a bridge inspection. These components are found on the underside of steel bridges. This type of detection would be beneficial to the inspection process to aid with unmanned aerial system missions as well as localizing and contextualizing elements to semi-automate bridge inspection reports or captioning. 
   
-- Training (SSD): We trained an SSD model and a YOLOv4 model. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository is the SSD configuration, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab. However, other researchers and interested people are welcome to try to get it running on your local machines!
+- Training (SSD): We trained a [Single Shot Detector]() (SSD) model and a [YOLOv4]() model. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository is the SSD configuration, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab. However, other researchers and interested people are welcome to try to get it running on your local machines!
 
-- Testing (SSD): We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. 
+- Testing (SSD): We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. We can visualize and save the predictions made by the trained model, as well as view the ground truth predictions overlayed on the images. 
 
-- Testing (Visualization): We can visualize and save the predictions made by the trained model, as well as view the ground truth predictions overlayed on the images. 
-
-- Visulization: We can concatenate the results from the predictions, ground truth labels, and base images for a visual summery of the performance.  
+- Visulization (SSD): We can concatenate the results from the predictions, ground truth labels, and base images for a visual summery of the performance.  
 
 ## References
 
+### Papers
+- [COCO-Bridge-2021]() Original paper using the COCO-Bridge-2021 dataset
+- [Development of Open-source Collaborative Structural Inspection Datasets]() Paper which references and introduces COCO-Bridge-2021+ dataset
+
 ### Dataset
-- The dataset information can be found [here](10.7294/16624495). **Please cite both the dataset and the journal article if you are using it.** 
-
-### Model
-- The model information can be found [here](10.7294/16625095). **Please cite both the model and the journal article if you are using it.** 
-
-The images in the dataset were annotated using [labelme](https://github.com/wkentaro/labelme). 
+The COCO-Bridge-2021+ dataset and information can be found [here](10.7294/16624495). 
+**Please cite both the dataset and the journal article if you are using it.** 
 
 The four object classes in the dataset are:
 ```
@@ -35,6 +27,11 @@ The four object classes in the dataset are:
           Gusset Plate Connection
           Cover Plate Termination:
 ```
+
+### Model
+The trained model weights and information can be found [here](10.7294/16625095). 
+**Please cite both the model and the journal article if you are using it.** 
+
 
 ## Requirements
 - CMake >= 3.18
