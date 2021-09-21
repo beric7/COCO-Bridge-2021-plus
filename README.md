@@ -11,7 +11,7 @@ Extension on the COCO-Bridge Dataset
 - Our dataset was focused on the structual components found on the underside of steel bridges. The images in the dataset were annotated
   using [labelme](https://github.com/wkentaro/labelme). 
   
-- Training: Trained an SSD model and a YOLOv4 model. The SSD had a best mAP score of 60% while the YOLOv4 model was able to reach 84.52% under the same model parameters. This repository hold the SSD model, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab, however, other researchers and interested people are welcome to try and get it up and running on your local machines!
+- Training: Trained an SSD model and a YOLOv4 model. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository hold the SSD model, while the YOLOv4 repository can be found here []. The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab, however, other researchers and interested people are welcome to try and get it up and running on your local machines!
 
 - Testing: We implemented several testing scripts. In general we utilized a script to make predictions, and output the results in text and csv file format. Those predictions are then compared to ground truth annotations and we are able to get the mAP scores for different confidence and IoU thresholds. 
 
@@ -171,4 +171,9 @@ The four object classes in the dataset are:
 - The output image from testing will be names **prediction.jpg** and can be shown by using:
 ```
 colabImageShow('predictions.jpg')
+```
+
+## Citation
+```
+hahasadf
 ```
