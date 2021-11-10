@@ -4,7 +4,7 @@
     <img src="figures/coco_pred.png" />
 </p>
 
-\[:red_circle: [Paper]()\] \[[Dataset](https:doi.org/10.7294/16624495)\] \[[Trained models](https://doi.org/10.7294/16625095.v1)\]
+\[:red_circle: [Paper]()\] \[[Dataset](https://doi.org/10.7294/16624495.v1)\] \[[Trained models](https://doi.org/10.7294/16625095.v1)\]
 
 ## Overview
 - Our dataset and model was focused on the detection of typical structual components which must be check during a bridge inspection. These components are found on the underside of steel bridges. This type of detection would be beneficial to the inspection process to aid with unmanned aerial system missions as well as localizing and contextualizing elements to semi-automate bridge inspection reports or captioning. 
@@ -22,7 +22,7 @@
 - [COCO-Bridge-2021](https://doi.org/10.1061/(ASCE)CP.1943-5487.0000949) Original paper using the COCO-Bridge-2021 dataset
 - :red_circle: [Development of Open-source Collaborative Structural Inspection Datasets](./beric7/structural_inspection_main/access/not_ready.png) (In review) Paper which references and introduces COCO-Bridge-2021+ dataset
 ### Dataset
-The COCO-Bridge-2021+ dataset and information can be found [here](https:doi.org/10.7294/16624495.v1). 
+The COCO-Bridge-2021+ dataset and information can be found [here](https://doi.org/10.7294/16624495.v1). 
 **Please cite both the dataset and the journal article if you are using it.** 
 The four object classes in the dataset are:
 ```
@@ -46,7 +46,7 @@ The most important environment configurations are the following:
 
 ## Training with the COCO-Bridge-2021+ dataset
 - Clone the repository
-- Download the [Dataset](https:doi.org/10.7294/16624495)
+- Download the [Dataset](https://doi.org/10.7294/16624495.v1)
 
 ## Training with a custom dataset
 1. Clone the repository
