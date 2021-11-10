@@ -58,11 +58,11 @@ The most important environment configurations are the following:
 ## Citation
 Structural Detail Dataset: 
 ```
-Bianchi, Eric; Hebdon, Matthew (2021): Corrosion Condition State Semantic Segmentation Dataset. 
-University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624663.v1 
+Bianchi, Eric; Hebdon, Matthew (2021): COCO-Bridge 2021+ Dataset. 
+University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624495.v1 
 ```
 
 Structural Detail Model:
 ```
-Bianchi, Eric; Hebdon, Matthew (2021): Trained Model for the Semantic Segmentation of Structural Material. 
-University Libraries, Virginia Tech. Software. https://doi.org/10.7294/16628620.v1 
+Bianchi, Eric; Hebdon, Matthew (2021): SSD and YOLOv4 Model for Structural Detail Detection. 
+University Libraries, Virginia Tech. Software. https://doi.org/10.7294/16625095.v1 
