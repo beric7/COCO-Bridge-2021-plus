@@ -7,6 +7,9 @@
 \[:red_circle: [Paper]()\] \[[Dataset](https://doi.org/10.7294/16624495.v1)\] \[[Trained models](https://doi.org/10.7294/16625095.v1)\]
 
 ## Overview
+
+**Please be patient this repository is still under construction...
+
 - Our dataset and model was focused on the detection of typical structual components which must be check during a bridge inspection. These components are found on the underside of steel bridges. This type of detection would be beneficial to the inspection process to aid with unmanned aerial system missions as well as localizing and contextualizing elements to semi-automate bridge inspection reports or captioning. 
   
 - Training (SSD): We trained a [Single Shot Detector](https://arxiv.org/abs/1512.02325) (SSD) model and a [YOLOv4](https://arxiv.org/abs/2004.10934) model. These models were chosen based on their inference speed and performance. Under the same model parameters of 25% confidence and an IoU of 50%, the SSD had a  mAP score of 50% while the YOLOv4 model was able to reach 84.52%. This repository is the SSD configuration, while the YOLOv4 repository can be found [here](https://github.com/beric7/YOLOv4_infrastructure). The drawback of the YOLOv4 model was that it was very difficult to configure, and we were only able to train and test the model in Google Colab. However, other researchers and interested people are welcome to try to get it running on your local machines!
