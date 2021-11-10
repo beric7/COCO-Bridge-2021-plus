@@ -22,7 +22,7 @@
 - [COCO-Bridge-2021](https://doi.org/10.1061/(ASCE)CP.1943-5487.0000949) Original paper using the COCO-Bridge-2021 dataset
 - :red_circle: [Development of Open-source Collaborative Structural Inspection Datasets](./beric7/structural_inspection_main/access/not_ready.png) (In review) Paper which references and introduces COCO-Bridge-2021+ dataset
 ### Dataset
-The COCO-Bridge-2021+ dataset and information can be found [here](https:doi.org/10.7294/16624495). 
+The COCO-Bridge-2021+ dataset and information can be found [here](https:doi.org/10.7294/16624495.v1). 
 **Please cite both the dataset and the journal article if you are using it.** 
 The four object classes in the dataset are:
 ```
