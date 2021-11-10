@@ -8,7 +8,7 @@
 
 ## Overview
 
-**Please be patient this repository is still under construction...
+**Please be patient this repository is still under construction...**
 
 - Our dataset and model was focused on the detection of typical structual components which must be check during a bridge inspection. These components are found on the underside of steel bridges. This type of detection would be beneficial to the inspection process to aid with unmanned aerial system missions as well as localizing and contextualizing elements to semi-automate bridge inspection reports or captioning. 
   
