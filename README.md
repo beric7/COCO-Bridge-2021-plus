@@ -22,7 +22,7 @@
 - [COCO-Bridge-2021]() Original paper using the COCO-Bridge-2021 dataset
 - [Development of Open-source Collaborative Structural Inspection Datasets]() Paper which references and introduces COCO-Bridge-2021+ dataset
 ### Dataset
-The COCO-Bridge-2021+ dataset and information can be found [here](10.7294/16624495). 
+The COCO-Bridge-2021+ dataset and information can be found [here](https:doi.org/10.7294/16624495). 
 **Please cite both the dataset and the journal article if you are using it.** 
 The four object classes in the dataset are:
 ```
@@ -32,7 +32,7 @@ Gusset Plate Connection
 Cover Plate Termination
 ```
 ### Model
-The trained model weights and information can be found [here](10.7294/16625095). 
+The trained model weights and information can be found [here](https://doi.org/10.7294/16625095.v1). 
 **Please cite both the model and the journal article if you are using it.** 
 ## Requirements
 The most important environment configurations are the following:
@@ -40,13 +40,13 @@ The most important environment configurations are the following:
 - Python == 3.6
 - 
 ## Evaluating Trained SSD Model
-- Download the SSD/YOLOv4 [Trained Models](10.7294/16624495)
+- Download the SSD/YOLOv4 [Trained Models](https://doi.org/10.7294/16625095.v1)
   
 ## Testing the Trained SSD Model
 
 ## Training with the COCO-Bridge-2021+ dataset
 - Clone the repository
-- Download the [Dataset](10.7294/16624495)
+- Download the [Dataset](https://doi.org/10.7294/16625095.v1)
 
 ## Training with a custom dataset
 1. Clone the repository
