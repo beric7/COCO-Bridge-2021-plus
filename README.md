@@ -46,7 +46,7 @@ The most important environment configurations are the following:
 
 ## Training with the COCO-Bridge-2021+ dataset
 - Clone the repository
-- Download the [Dataset](https://doi.org/10.7294/16625095.v1)
+- Download the [Dataset](https:doi.org/10.7294/16624495)
 
 ## Training with a custom dataset
 1. Clone the repository
