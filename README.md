@@ -56,13 +56,13 @@ The most important environment configurations are the following:
 
 
 ## Citation
-Corrosion Condition State Dataset: 
+Structural Detail Dataset: 
 ```
 Bianchi, Eric; Hebdon, Matthew (2021): Corrosion Condition State Semantic Segmentation Dataset. 
 University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624663.v1 
 ```
 
-Corrosion Condition State Model:
+Structural Detail Model:
 ```
 Bianchi, Eric; Hebdon, Matthew (2021): Trained Model for the Semantic Segmentation of Structural Material. 
 University Libraries, Virginia Tech. Software. https://doi.org/10.7294/16628620.v1 
